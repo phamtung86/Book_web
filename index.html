@@ -1,3 +1,896 @@
+<<<<<<< HEAD
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Book</title>
+    <link rel="icon" href="https://st3.depositphotos.com/16030310/18317/v/450/depositphotos_183173266-stock-illustration-letters-logo-initial-logo-identity.jpg">
+    <script src="https://kit.fontawesome.com/7769952fd3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="https://st3.depositphotos.com/29475518/32959/v/450/depositphotos_329592254-stock-illustration-book-logo-design-icon-template.jpg" alt="logo" class="image--logo">
+            </div>
+            <div class="book__search">
+                <input class="search--input" type="text" placeholder="Nhập tên sách bạn muốn tìm">
+                <span class="icon--search"><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+            <div class="hotline">
+                <a href="" class="hotline--click">
+                    <span class="icon--hotline" style="padding: 5px 5px;"><i style="font-size: 30px;height: 100%;" class="fa-solid fa-phone"></i></span>
+                    <span class="number--hotline">Hotline <br>0344508700</span>
+                </a>
+            </div>
+            <div class="user">
+                <a href="" class="user--click">
+                    <span class="icon--user" style="padding: 5px 5px;"><i style="font-size: 30px;height: 100%;" class="fa-solid fa-user"></i></span>
+                    <span class="title--user"> Tài Khoản <br> Xin chào 
+                    <div class="account">
+                        <div class="account--options">
+                            <a href="" class="account--options--click">Đăng Nhập</a>
+                        </div>                 
+                        <div class="account--options">
+                            <a href="" class="account--options--click">Đăng Kí</a>
+                        </div>               
+                        <div class="account--options">
+                            <a href="" class="account--options--click">Yêu Thích</a>
+                        </div>                  
+                        <div class="account--options">
+                            <a href="" class="account--options--click">Đã Xem</a>
+                        </div>
+                    </div>
+                    </span>
+                </a>
+            </div>
+            <div class="cart">
+                <a href="#" class="cart--click" style="position: absolute;">
+                    <span class="icon--cart" style="padding: 5px 5px;"><i style="font-size: 30px;height: 100%;" class="fa-solid fa-cart-shopping"></i></span>
+                    <span class="title--cart">Giỏ Hàng <br>Thanh Toán
+                        <div id="cart--bill" class="product--selled">
+                            <h3 class="bill--title">Đơn Hàng Của Bạn</h3>
+                            <div class="infor--product--bill">
+                                <div class="card--infor--bill">Thông tin sản phẩm</div>
+                                <div class="card--infor--bill">Đơn giá</div>
+                                <div class="card--infor--bill">Số lượng</div>
+                                <div class="card--infor--bill">Thành tiền</div>
+                            </div>
+                            <div class="product--bill">
+                                <div class="image--product--bill">
+                                    <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/2830aad4-23e9-4109-8872-1e071c9323d9.jpg?v=1618630773713" alt="image--bill" class="image--bill">
+                                </div>
+                                <div class="bill--product--price">₫ 79.200</div>
+                                <div class="bill--product--quantity">
+                                    <input type="number" name="quantity" min="1" max="100" value="1">
+                                </div>
+                                <div class="bill--product--total">₫ 79.200</div>
+                            </div>
+
+                            <div class="pay--bill"><button class="click--pay" onclick="clickPay()">Thanh Toán</button></div>
+                        </div></span>
+                        <!-- end--bill -->
+                </a>
+               
+            </div>
+        </div>
+    </div>
+    <div class="book__row">
+        <div class="book__introduce">
+            <div class="book__nav">
+            <div class="nav--options">
+                <ul class="item__big">
+                    <li class="nav__item">
+                        <a href="" class="nav--item--click">
+                            <img style="width: 15%;height: 100%;" src="https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/menu_ico_1.png?1695181802906" alt="icom" class="image--icon">
+                            <span class="item--title" style="width: 70%;font-size: 16px;font-weight: 700;font-family: Arial, Helvetica, sans-serif" >Trang Chủ</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav--item--click">
+                            <img style="width: 15%;height: 100%;" src="https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/menu_ico_2.png?1695181802906" alt="icom" class="image--icon">
+                            <span class="item--title" style="width: 70%;font-size: 16px;font-weight: 700;font-family: Arial, Helvetica, sans-serif" >Giới Thiệu</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav--item--click">
+                            <img style="width: 15%;height: 100%;" src="	https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/menu_ico_3.png?1695181802906" alt="icom" class="image--icon">
+                            <span class="item--title" style="width: 70%;font-size: 16px;font-weight: 700;font-family: Arial, Helvetica, sans-serif" >Sản Phẩm</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav--item--click">
+                            <img style="width: 15%;height: 100%;" src="	https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/menu_ico_4.png?1695181802906" alt="icom" class="image--icon">
+                            <span class="item--title" style="width: 70%;font-size: 16px;font-weight: 700;font-family: Arial, Helvetica, sans-serif" >Khuyến Mãi</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav--item--click">
+                            <img style="width: 15%;height: 100%;" src="	https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/menu_ico_5.png?1695181802906" alt="icom" class="image--icon">
+                            <span class="item--title" style="width: 70%;font-size: 16px;font-weight: 700;font-family: Arial, Helvetica, sans-serif" >Sách Mới Phát Hành</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav--item--click">
+                            <img style="width: 15%;height: 100%;" src="	https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/menu_ico_6.png?1695181802906" alt="icom" class="image--icon">
+                            <span class="item--title" style="width: 70%;font-size: 16px;font-weight: 700;font-family: Arial, Helvetica, sans-serif" >Liên Hệ</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav--none">
+
+            </div>
+            </div>
+            <div class="book__banner__deal">
+                <div class="book__banner">
+                    <div class="banner--first">
+                     <img src="https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/slider_1.jpg?1695181802906" alt="banner--first" class="image--banner--first">
+                     <img src="https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/slider_2.jpg?1695181802906" alt="image--banner--first" class="image--banner--first">
+                    </div>  
+                    <div class="banner--second">
+                     <div class="card--banner--image" style="padding:0 0 5px 5px;"><img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/themes/920069/assets/banner_1.jpg?1695181802906" alt="image--banner--second" class="image--banner--second"></div>
+                     <div class="card--banner--image" style="padding:5px 0 0 5px;"><img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/themes/920069/assets/banner_2.jpg?1695181802906" alt="image--banner--second" class="image--banner--second"></div>
+                    </div>
+                </div>
+                <div class="book__deal">
+                    <div class="flash-sale">
+                        <div class="title--buttom">
+                            <div class="flash-sale--title">Deal Sốc Mỗi Ngày</div>
+                            <div id="MyClockDisplay" class="clock" onload="timeReve()"></div>
+                            <div class="flash-sale--buttom"><button class="buttom--sale"><a href="" class="buttom--click">Xem Thêm</a></button></div>
+                        </div>
+                        <div class="flash-sale--product">
+                            <div class="product-sale">
+                                <div class="product--item">
+                                    <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/vn-11134207-7qukw-lkbsfi6hvr1ka3-1692011166935.jpg?v=1692011171817" alt="product--sale" class="image--product--item">
+                                    <div class="sale--banner">Sale 8%</div>
+                                    <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                                </div>
+                                <div class="product--title">
+                                    <div class="item--title">
+                                        <a href="" target="_blank" class="item--title--click">Sách - BEYOND THE STORY : 10-YEAR RECORD OF BTS</a>
+                                    </div>
+                                    <div class="item--price--sell">
+                                        <div class="item--price">₫ 541.880</div>
+                                        <div class="item--sell">Đã bán 231</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-sale">
+                                <div class="product--item">
+                                    <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/2830aad4-23e9-4109-8872-1e071c9323d9.jpg?v=1618630773713" alt="product--sale" class="image--product--item">
+                                    <div class="sale--banner">Sale 20%</div>
+                                    <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                                </div>
+                                <div class="product--title">
+                                    <div class="item--title">
+                                        <a href="" target="_blank" class="item--title--click">Sách - Hãy khiến tương lai biết ơn vì hiện tại bạn đã cố gắng hết mình</a>
+                                    </div>
+                                    <div class="item--price--sell">
+                                        <div class="item--price">₫ 79.200</div>
+                                        <div class="item--sell">Đã bán 240</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-sale">
+                                <div class="product--item">
+                                    <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/2e081084-3dbb-4a78-8c25-9563a0f3cb73.jpg?v=1618630773783" alt="product--sale" class="image--product--item">
+                                    <div class="sale--banner">Sale 20%</div>
+                                    <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                                </div>
+                                <div class="product--title">
+                                    <div class="item--title">
+                                        <a href="" target="_blank" class="item--title--click">Sách - Sống Hạnh Phúc, Cân Bằng Cảm Xúc</a>
+                                    </div>
+                                    <div class="item--price--sell">
+                                        <div class="item--price">₫ 71.200</div>
+                                        <div class="item--sell">Đã bán 189</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-sale">
+                                <div class="product--item">
+                                    <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/59fc184d-0d23-48ba-b8fd-640e766d2f68.jpg?v=1618630776743" alt="product--sale" class="image--product--item">
+                                    <div class="sale--banner">Sale 20%</div>
+                                    <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                                </div>
+                                <div class="product--title">
+                                    <div class="item--title">
+                                        <a href="" target="_blank" class="item--title--click">Sách - Loài hoang dã – tập 1</a>
+                                    </div>
+                                    <div class="item--price--sell">
+                                        <div class="item--price">₫ 79.200</div>
+                                        <div class="item--sell">Đã bán 192</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-sale">
+                                <div class="product--item">
+                                    <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/d214d22a-2ef1-4bcc-acb2-5e4719a3bfcb.jpg?v=1618630776793" alt="product--sale" class="image--product--item">
+                                    <div class="sale--banner">Sale 20%</div>
+                                    <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                                </div>
+                                <div class="product--title">
+                                    <div class="item--title">
+                                        <a href="" target="_blank" class="item--title--click">Sách - Nhắm Đúng Mục Tiêu Chọn Đúng Điểm Đến</a>
+                                    </div>
+                                    <div class="item--price--sell">
+                                        <div class="item--price">₫ 100.800</div>
+                                        <div class="item--sell">Sắp hết hàng</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-sale">
+                                <div class="product--item">
+                                    <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/445eee04-e577-4a7d-9a18-01f9a8b11c18.jpg?v=1618630776847" alt="product--sale" class="image--product--item">
+                                    <div class="sale--banner">Sale 20%</div>
+                                    <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                                </div>
+                                <div class="product--title">
+                                    <div class="item--title">
+                                        <a href="" target="_blank" class="item--title--click">Sách - Thương ai đừng đợi đến ngày mai</a>
+                                    </div>
+                                    <div class="item--price--sell">
+                                        <div class="item--price">₫ 71.200</div>
+                                        <div class="item--sell">195</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-sale">
+                                <div class="product--item">
+                                    <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/16d733584f43f33d86090a139cf67e01.jpg?v=1618630778957" alt="product--sale" class="image--product--item">
+                                    <div class="sale--banner">Sale 20%</div>
+                                    <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                                </div>
+                                <div class="product--title">
+                                    <div class="item--title">
+                                        <a href="" target="_blank" class="item--title--click">Sách - Kẻ nhập vai (Trọn bộ 2 tập)</a>
+                                    </div>
+                                    <div class="item--price--sell">
+                                        <div class="item--price">₫ 239.200</div>
+                                        <div class="item--sell">189</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="voucher">
+                        <div class="card--voucher">
+                            <a href="" class="card--voucher--click"><b>Giảm 50K</b> <br><br> <b style="font-size: 18px;">Đơn Tối Thiểu 350k</b></a>
+                        </div>
+                        <div class="card--voucher">
+                            <a href="" class="card--voucher--click"><b>Mua 5 Cuốn</b> <br><br> <b style="font-size: 18px;">Giảm Thêm 20K</b></a>
+                        </div>
+                        <div class="card--voucher">
+                            <a href="" class="card--voucher--click"><b>Freeship - Giảm 25k</b> <br><br> <b style="font-size: 18px;">Đơn Tối Thiểu 229K</b></a>
+                        </div>
+                        <div class="card--voucher">
+                            <a href="" class="card--voucher--click"><b>Giảm 2k</b> <br><br> <b style="font-size: 18px;">Đơn Tối Thiểu 100K</b></a>
+                        </div>
+                        <div class="card--voucher">
+                            <a href="" class="card--voucher--click"><b>Mua 2 Cuốn</b> <br><br> <b style="font-size: 18px;">Giảm Thêm 5K</b></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="book__best-seller">
+        <div class="best-seller--product--title">
+            <div class="best-seller--title title--buttom">
+                <div class="best-seller--title flash-sale--title">BEST SELLER</div>
+                <div class="best-seller--buttom flash-sale--buttom"><button class="buttom--sale"><a href="" class="buttom--click">Xem Thêm</a></button></div>
+            </div>
+            <div class="best-seller--product">
+                <div class="product--seller product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/combo-dac-nhan-tam-nha-gia-kim-1685350354660.jpg?v=1685350359023" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - Combo 2 Cuốn: Đắc Nhân Tâm + Nhà Giả Kim</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 150.400</div>
+                            <div class="item--sell" style="opacity: 0;">Đã bán 231</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product--seller product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/vn-11134207-7qukw-lhcqdj0tliya21-1685327004403.jpg?v=1685327009530" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - Cắt Nghĩa Muộn Phiền Theo Tâm Lý Học</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 120.400</div>
+                            <div class="item--sell" style="opacity: 0;">Đã bán 231</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product--seller product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/vn-11134207-7qukw-lha9lwzs81dff5-1685174714426.jpg?v=1685174719537" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - Thương Nhớ Để Dành</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 83.200</div>
+                            <div class="item--sell" style="opacity: 0;">Đã bán 231</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product--seller product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/vn-11134207-7qukw-lha8sue13jua54-1685173677539.jpg?v=1685173684167" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - Truyền Kỳ Về Tình Yêu Của Quỷ</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 87.200</div>
+                            <div class="item--sell" style="opacity: 0;">Đã bán 231</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product--seller product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/vn-11134207-7qukw-lh8w93zcx54iab-1685096596332.jpg?v=1685096604037" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - Khi Trầm Cảm Bạn Không Đơn Độc</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 95.200</div>
+                            <div class="item--sell" style="opacity: 0;">Đã bán 231</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="best-seller--banner">
+            <img style="width: 100%; height: 100%;border-radius: 10px;" src="https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/bestseler.jpg?1695181802906" alt="best-seller" class="image--best-seller">
+        </div>
+    </div>
+    <div class="book__combo combo1">
+        <div class="combo--title--product">
+            <div class="combo--title title--buttom">
+                <div class="combo--title flash-sale--title">COMBO - SÁCH HOT</div>
+                <div class="com-seller--buttom flash-sale--buttom"><button class="buttom--sale"><a href="" class="buttom--click">Xem Thêm</a></button></div>
+            </div>
+            <div class="combo--product">
+                <div class="product--combo product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/untitled-1691803116741.png?v=1691837047567" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner" style="opacity: 0;">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - Combo 2 Cuốn: Những Câu Hỏi Lớn Từ Người Phàm Trần Tí Hon Về Cái Chết + Không Diệt Không Sinh Đừng Sợ Hãi</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 189.000</div>
+                            <div class="item--sell" style="opacity: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product--combo product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/combo-ti-hon-cam-nang-1686281491487.jpg?v=1686281496140" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner" style="opacity: 0;">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - Combo 2 Cuốn: Những Câu Hỏi Lớn Từ Người Phàm Trần Tí Hon Về Cái Chết + Cẩm Nang Khám Phá Cơ Thể Người</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 157.000</div>
+                            <div class="item--sell" style="opacity: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product--combo product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/combo-dam-mi-cong-tu-hoan-hi-1685585924829.jpg?v=1685585928770" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner" style="opacity: 0;">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - Combo Công Tử Hoan Hỉ: Hàng Ma Tháp + Quỷ Giá + Mi Mục Như Họa</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 443.000</div>
+                            <div class="item--sell" style="opacity: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product--combo product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/combo-chery-1685524211691.jpg?v=1685526479250" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner" style="opacity: 0;">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - Combo: Cherry Magic (Tập 1 bản in sau + 2 + 3)</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 327.000</div>
+                            <div class="item--sell" style="opacity: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product--combo product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/cherry-magic-tap-1-2-1685524121390.jpg?v=1685526476300" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner" style="opacity: 0;">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - Combo: Cherry Magic (Tập 1 bản in sau + 2)</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 218.000</div>
+                            <div class="item--sell" style="opacity: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product--combo product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/combo-999-la-thu-song-ngu-1685519560657.png?v=1685522305667" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - Combo: 999 Lá Thư Gửi Cho Chính Mình Tập 1+2 (Phiên Bản SONG NGỮ Trung - Việt)</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 158.400</div>
+                            <div class="item--sell" style="opacity: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="combo--banner">
+                <div class="combo--banner--image">
+                   <a href="" class="image--combo--click">
+                    <img src="https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/m_banner_1.jpg?1695181802906" alt="banner--combo" class="image--combo">
+                   </a>
+                </div>
+                <div class="combo--banner--image">
+                    <a href="" class="image--combo--click">
+                        <img src="https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/m_banner_2.jpg?1695181802906" alt="banner--combo" class="image--combo">
+                    </a>
+                </div>
+                <div class="combo--banner--image">
+                    <a href="" class="image--combo--click">
+                        <img src="https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/m_banner_3.jpg?1695181802906" alt="banner--combo" class="image--combo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="book__combo combo2">
+        <div class="combo--title--product">
+            <div class="combo--title title--buttom">
+                <div class="combo--title flash-sale--title">KINH DỊ TRINH THÁM</div>
+                <div class="com-seller--buttom flash-sale--buttom"><button class="buttom--sale"><a href="" class="buttom--click">Xem Thêm</a></button></div>
+            </div>
+            <div class="combo--product">
+                <div class="product--combo product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/combo-999-la-thu-song-ngu-1685519560657.png?v=1685522305667" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - Combo: 999 Lá Thư Gửi Cho Chính Mình Tập 1+2 (Phiên Bản SONG NGỮ Trung - Việt)</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 158.400</div>
+                            <div class="item--sell" style="opacity: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product--combo product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/b1-1685518635296.png?v=1685521494110" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - 999 Lá Thư Gửi Cho Chính Mình (**) - Những Lá Thư Ấn Tượng Nhất (Phiên Bản SONG NGỮ Trung - Việt)</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 79.200</div>
+                            <div class="item--sell" style="opacity: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product--combo product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/chuong-gio-3-1685436157575.jpg?v=1685436162633" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - Combo 2 Cuốn: Chuông Gió (Tập 3+4)</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 278.400</div>
+                            <div class="item--sell" style="opacity: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product--combo product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/combo-dac-nhan-tam-nha-gia-kim-1685350354660.jpg?v=1685350359023" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - Combo 2 Cuốn: Đắc Nhân Tâm + Nhà Giả Kim</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 150.400</div>
+                            <div class="item--sell" style="opacity: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product--combo product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/vn-11134207-7qukw-lhcqdj1dgi0ibc-1685328808613.jpg?v=1685328814283" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - Bàn Tròn Trí Mạng (Tập 3+4)</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 220.000</div>
+                            <div class="item--sell" style="opacity: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product--combo product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/vn-11134207-7qukw-lhcqdj0tliya21-1685327004403.jpg?v=1685327009530" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - Cắt Nghĩa Muộn Phiền Theo Tâm Lý Học</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 120.000</div>
+                            <div class="item--sell" style="opacity: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="book__combo combo3">
+        <div class="combo--title--product">
+            <div class="combo--title title--buttom">
+                <div class="combo--title flash-sale--title">TÂM LÝ - KĨ NĂNG</div>
+                <div class="com-seller--buttom flash-sale--buttom"><button class="buttom--sale"><a href="" class="buttom--click">Xem Thêm</a></button></div>
+            </div>
+            <div class="combo--product">
+                <div class="product--combo product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/e8c5adfd-5b83-4abc-8452-a477badf9568.jpg?v=1618630777190" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - Từ IQ đến EQ – nắm bắt thành công qua trí tuệ cảm xúc</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 72.800</div>
+                            <div class="item--sell" style="opacity: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product--combo product-sale">
+                    <div class="product--item">
+                        <img src=" https://bizweb.dktcdn.net/thumb/large/100/417/638/products/2e3529a46a1a71f2c8e5adbaf4285cc8.jpg?v=1618630777363" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - Tư Duy Của Người Dẫn Đầu – 7 Yếu Tố Để Trở Thành Người Dẫn Đầu Đám Đông</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 103.200</div>
+                            <div class="item--sell" style="opacity: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product--combo product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/49d0e14142df6726921fccd80fc72535.jpg?v=1618630796947" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - Nghệ Thuật Tập Trung: Nâng Cao Năng Suất, Tối Ưu Thời Gian, Hiệu Quả Bất Ngờ</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 79.200</div>
+                            <div class="item--sell" style="opacity: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product--combo product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/3b9253b6320a178307014b0677b8b45a.jpg?v=1618630797000" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - [100 Trích dẫn thần thánh] Bài học triết lý từ những hiền nhân lỗi lạc</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 95.200</div>
+                            <div class="item--sell" style="opacity: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product--combo product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/9f8507fafaa0d671300cb4195ab16efd.jpg?v=1618630805120" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - Nghệ Thuật Truyền Đạt, Bí Quyết Thành Công Của Người Nhật 2</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 79.200</div>
+                            <div class="item--sell" style="opacity: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product--combo product-sale">
+                    <div class="product--item">
+                        <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/a8c2379d8544cb212fcd744c594f8227.jpg?v=1618630822807" alt="product--sale" class="image--product--item">
+                        <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
+                    </div>
+                    <div class="product--title">
+                        <div class="item--title">
+                            <a href="" target="_blank" class="item--title--click">Sách - [100 Trích dẫn thần thánh] Tinh thần thủ lĩnh từ những lãnh đạo kiệt xuất</a>
+                        </div>
+                        <div class="item--price--sell">
+                            <div class="item--price">₫ 95.200</div>
+                            <div class="item--sell" style="opacity: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="book__update">
+        <div class="update--infor--news">
+            <div class="update__infor">
+                <div class="update--title">Thông tin thị trường</div>
+                <div class="update--infor--content">
+                    <div class="infor--content">
+                        <div class="item--infor--image">
+                            <a href="" class="infor--image--clcik">
+                                <img src="https://bizweb.dktcdn.net/100/417/638/articles/tin3.jpg?v=1612490238687" alt="image--update" class="image--update">
+                            </a>
+                        </div>
+                        <div class="item--infor">
+                            <h3 class="title--content"><a href="" class="title--content--click">Không gian nghệ thuật trong 'Sách Tết Tân Sửu'</a></h3>
+                            <p class="content--text">"Sách Tết Tân Sửu" gồm 27 bài viết, 15 bài thơ, sáu bài bình luận cùng nhiều hình ảnh minh họa nét đẹp đầu xuân.
+                                Tác phẩm đem đến những câu chuyện vui ngày xuân, cũng như điểm lại nghệ thuật...</p>
+                        </div>
+                    </div>
+                    <div class="infor--content">
+                        <div class="item--infor--image">
+                            <a href="" class="infor--image--clcik">
+                                <img src="https://bizweb.dktcdn.net/100/417/638/articles/tin2.jpg?v=1612490085097" alt="image--update" class="image--update">
+                            </a>
+                        </div>
+                        <div class="item--infor">
+                            <h3 class="title--content"><a href="" class="title--content--click">Ra mắt bộ truyện 'Hữu phỉ'</a></h3>
+                            <p class="content--text">Bộ bốn cuốn "Hữu Phỉ" của tác giả Priest kể biến cố khi hành tẩu giang hồ của nữ hiệp Chu Phỉ.
+                                Tác phẩm thuộc thể loại ngôn tình, võ hiệp, lấy bối cảnh thời thế loạn lạc. Gia đình sa...</p>
+                        </div>
+                    </div>
+                    <div class="infor--content">
+                        <div class="item--infor--image">
+                            <a href="" class="infor--image--clcik">
+                                <img src="https://bizweb.dktcdn.net/100/417/638/articles/tin1.jpg?v=1612489950400" alt="image--update" class="image--update">
+                            </a>
+                        </div>
+                        <div class="item--infor">
+                            <h3 class="title--content"><a href="" class="title--content--click">Bộ 'Việt Nam danh tác' thêm bốn tác phẩm</a></h3>
+                            <p class="content--text">"Những ngày thơ ấu", "Lạnh lùng", "Gánh hàng hoa" và "Sợi tóc" được chọn in lại, tiếp nối bộ sách "Việt Nam danh tác".
+                                Ngày 15/1, Nhã Nam tổ chức tọa đàm ra mắt sách tại thư viện Viện Pháp, Hà...</p>
+                        </div>
+                    </div>
+                    <div class="infor--content">
+                        <div class="item--infor--image">
+                            <a href="" class="infor--image--clcik">
+                                <img src="https://bizweb.dktcdn.net/100/417/638/articles/1d.jpg?v=1612421094990" alt="image--update" class="image--update">
+                            </a>
+                        </div>
+                        <div class="item--infor">
+                            <h3 class="title--content"><a href="" class="title--content--click">TOP 7 Sách văn học Việt Nam như Cỗ máy thời gian đưa bạn về tuổi thơ sách</a></h3>
+                            <p class="content--text">"Những ngày thơ ấu", "Lạnh lùng", "Gánh hàng hoa" và "Sợi tóc" được chọn in lại, tiếp nối bộ sách "Việt Nam danh tác".
+                                Ngày 15/1, Nhã Nam tổ chức tọa đàm ra mắt sách tại thư viện Viện Pháp, Hà...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="update__news">
+                <div class="update--title">Tin mới cập nhật</div>
+            </div>
+        </div>
+    </div>
+    <div class="book__footer">
+        <div class="serve__customer">
+            <div class="card--serve">
+                <a href="" class="card--serve--click">
+                    <img style="width: 20%;" src="https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/policy_1.png?1695181802906" alt="" class="image--serve">
+                    <span style="padding: 10px 10px 0px 10px;width: 70%;"><b>Miễn phí vận chuyển</b><br><p style="padding: 5px 0;margin: 0;">Cho đơn hàng trên 500k</p></span>
+                </a>
+            </div>
+            <div class="card--serve">
+                <a href="" class="card--serve--click">
+                    <img style="width: 20%;" src="	https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/policy_2.png?1695181802906" alt="" class="image--serve">
+                    <span style="padding: 10px 10px 0px 10px;width: 70%;"><b>Thanh toán an toàn</b><br><p style="padding: 5px 0;margin: 0;">100% Thanh toán bảo mật</p></span>
+                </a>
+            </div>
+            <div class="card--serve">
+                <a href="" class="card--serve--click">
+                    <img style="width: 20%;" src="	https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/policy_3.png?1695181802906" alt="" class="image--serve">
+                    <span style="padding: 10px 10px 0px 10px;width: 70%;"><b>Hỗ trợ khách hàng 24/7</b><br><p style="padding: 5px 0;margin: 0;">Liên hệ với chúng tôi ngay</p></span>
+                </a>
+            </div>
+            <div class="card--serve">
+                <a href="" class="card--serve--click">
+                    <img style="width: 20%;" src="https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/policy_4.png?1695181802906" alt="" class="image--serve">
+                    <span style="padding: 10px 10px 0px 10px;width: 70%;"><b>Miễn phí hoàn hàng</b><br><p style="padding: 5px 0;margin: 0;">Nếu hàng có lỗi</p></span>
+                </a>
+            </div>
+        </div>
+        <div class="company__infor">
+            <div class="infor--company">
+                <div class="logo--company">
+                    <img src="https://thumbs.dreamstime.com/b/initial-letter-pt-logotype-company-name-colored-blue-grey-swoosh-design-vector-logo-business-company-identity-initial-199362095.jpg" alt="" class="image--logo">
+                </div>
+                <p class="infor">
+                    <img src="https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/addico.png?1695178083895" alt="">
+                    Hải Hậu - Nam Định - Việt Nam
+                </p>
+                <p class="infor">
+                    <img src="https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/phoneico.png?1695178083895" alt="">
+                    0344508700
+                </p>
+                <p class="infor" style="font-size: 14px;">
+                    <img src="https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/mailico.png?1695178083895" alt="">
+                    phamvantung149@gmail.com
+                </p>
+            </div>
+            <div class="infor--company">
+                <h3 class="infor--title">Thông tin</h4>
+                <p class="infor2">
+                    <a href="" class="infor--click">Trang chủ</a>
+                </p>
+                <p class="infor2">
+                    <a href="" class="infor--click">Giới thiệu</a>
+                </p>
+                <p class="infor2">
+                    <a href="" class="infor--click">Sản phẩm</a>
+                </p>
+                <p class="infor2">
+                    <a href="" class="infor--click">Khuyến mại</a>
+                </p>
+                <p class="infor2">
+                    <a href="" class="infor--click">Sách mới phát hành</a>
+                </p>
+                <p class="infor2">
+                    <a href="" class="infor--click">Liên hệ</a>
+                </p>
+            </div>
+            <div class="infor--company">
+                <h3 class="infor--title">Khách hàng</h3>
+                <p class="infor2">
+                    <a href="" class="infor--click">Chính sách bảo mật</a>
+                </p>
+                <p class="infor2">
+                    <a href="" class="infor--click">Chính sách vận chuyển</a>
+                </p>
+                <p class="infor2">
+                    <a href="" class="infor--click">Chính sách đổi trả</a>
+                </p>
+                <p class="infor2">
+                    <a href="" class="infor--click">Quy định sử dụng</a>
+                </p>
+            </div>
+            <div class="infor--company">
+                <h3 class="infor--title">Hướng dẫn</h3>
+                <p class="infor2">
+                    <a href="" class="infor--click">Hướng dẫn mua hàng</a>
+                </p>
+                <p class="infor2">
+                    <a href="" class="infor--click">Hướng dẫn thanh toán</a>
+                </p>
+                <p class="infor2">
+                    <a href="" class="infor--click">Hướng dẫn giao nhận</a>
+                </p>
+                <p class="infor2">
+                    <a href="" class="infor--click">Điều khoản sử dụng</a>
+                </p>
+            </div>
+            <div class="infor--company">
+                <h3 class="infor--title">Chấp nhận thanh toán</h3>
+                <div class="card--payment">
+                    <img src="https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/payment_1.png?1695181802906" alt="" class="image--pay">
+                    <img src="https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/payment_2.png?1695181802906" alt="" class="image--pay">
+                    <img src="https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/payment_3.png?1695181802906" alt="" class="image--pay">
+                    <img src="https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/payment_4.png?1695181802906" alt="" class="image--pay">
+                </div>
+                <h4 class="infor--title">Theo dõi chúng tôi</h4>
+                <div class="card--follow">
+                    <a href="" class="card--follow--click">
+                        <img src="https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/facebook.svg?1695181802906" alt="" class="image--follow">
+                    </a>
+                    <a href="" class="card--follow--click">
+                        <img src="	https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/youtube.svg?1695181802906" alt="" class="image--follow">
+                    </a>
+                    <a href="" class="card--follow--click">
+                        <img src="	https://bizweb.dktcdn.net/100/417/638/themes/920069/assets/instagram.svg?1695181802906" alt="" class="image--follow">
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <h3 class="copyright--title" style="margin: 5px;">© Bản quyền thuộc về PVT</h3>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+=======
 <html lang="en">
 <head>
     <meta charset="UTF-8">
