@@ -390,6 +390,17 @@ border-radius: 10px;
 .flash-sale--buttom{
     padding-right: 10px;
 }
+.clock{
+    width: 7rem;
+    /* height: 100%; */
+    font-size: 25px;
+    font-weight: 700;
+   text-align: center;
+   background-color: rgb(255, 53, 53);
+   padding: 15px 5px;
+   color: #fff;
+   border-radius: 10px ;
+}
 .buttom--sale{
     height: 80%;
     width: 7rem;
