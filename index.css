@@ -98,7 +98,7 @@ body::-webkit-scrollbar-track{
     width: 30rem;
     background-color:rgb(255, 255, 255);
     position: absolute;
-    left: 20rem;
+    left: -20rem;
     display: none;
     border-radius: 10px;
     z-index: 1;
@@ -145,7 +145,7 @@ body::-webkit-scrollbar-track{
     text-align: center;
 }
 .product--bill{
-    height:10rem ;
+    height:auto ;
     width: 30rem;
     display: flex;
     flex-wrap:wrap ;
@@ -392,14 +392,16 @@ border-radius: 10px;
 }
 .clock{
     width: 7rem;
-    /* height: 100%; */
+   height: 2rem;
     font-size: 25px;
     font-weight: 700;
    text-align: center;
    background-color: rgb(255, 53, 53);
-   padding: 15px 5px;
+   
+   /* padding: 10px 5px; */
    color: #fff;
    border-radius: 10px ;
+   text-align: center;
 }
 .buttom--sale{
     height: 80%;
@@ -500,6 +502,7 @@ border-radius: 10px;
     margin: auto;
     opacity: 0;
     z-index: 1;
+    cursor: pointer;
 }
 .action--cart--click{
     text-decoration: none;
@@ -508,7 +511,7 @@ border-radius: 10px;
 .action--cart:hover{
     background-color:rgb(249,76,47);
 }
-.action--cart--click:hover{
+.action--cart:hover{
     color: white;
 }
 .product-sale:hover .action--cart{
