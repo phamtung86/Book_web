@@ -95,23 +95,23 @@ body::-webkit-scrollbar-track{
 /* bill product */
 .product--selled{
     height: auto;
-    width: 30rem;
+    width: 40rem;
     background-color:rgb(255, 255, 255);
     position: absolute;
-    left: -20rem;
-    display: none;
+    left: -30rem;
+    /* display: none; */
     border-radius: 10px;
     z-index: 1;
     padding: 10px 0px;
 }
-.title--cart:hover .product--selled{
+/* .title--cart:hover .product--selled{
     display: block;
     animation-name: change1;
     animation-duration:  1s;
     animation-timing-function:  ease;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-}
+} */
 @keyframes change1{
     from{
         left: 20rem;
@@ -134,7 +134,7 @@ body::-webkit-scrollbar-track{
 }
 .card--infor--bill:nth-child(1){
     height: 2rem;
-    width: 40%;
+    width: 30%;
     text-align: center;
 }
 .card--infor--bill:nth-child(2),
@@ -144,21 +144,30 @@ body::-webkit-scrollbar-track{
     width: 20%;
     text-align: center;
 }
+.card--infor--bill:nth-child(5){
+    height: 3rem;
+    width: 10%;
+    text-align: center;
+}
 .product--bill{
     height:auto ;
-    width: 30rem;
+    width: 40rem;
     display: flex;
     flex-wrap:wrap ;
+    gap: 0px;
+    align-items: center;
 }
 .image--product--bill{
-    height: 5rem;
-    width: 40%;
+    height: 6rem;
+    width: 30%;
     display: flex;
+    border-bottom: 1px solid black;
 }
 .image--bill{
     height: 100%;
     width: 50%;
     margin: auto;
+    padding: 2px;
 }
 .infor--bill--text{
     color: black;
@@ -167,13 +176,30 @@ body::-webkit-scrollbar-track{
 .bill--product--price,
 .bill--product--quantity,
 .bill--product--total{
-    height: 5rem;
     width: 20%;
+    height: 6rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+.remove--product{
+    height: 6rem;
+    width: 10%;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.total--product--selled{
+    height: 3rem;
+    width: 40rem;
     color: black;
     text-align: center;
+    margin-top: 10px;
 }
-
-
 .pay--bill{
     height: 3rem;
     width: 80%;

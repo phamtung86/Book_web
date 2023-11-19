@@ -44,7 +44,7 @@
                     </span>
                 </a>
             </div>
-            <div class="cart" id="hi" onload="loadDataCart()">
+            <div class="cart" onload="loadDataCart()">
                 <a href="#" class="cart--click" style="position: absolute;">
                     <span class="icon--cart" style="padding: 5px 5px;"><i style="font-size: 30px;height: 100%;" class="fa-solid fa-cart-shopping"></i></span>
                     <span class="title--cart">Giỏ Hàng <span id="number--product"> </span> <br>Thanh Toán
@@ -55,14 +55,12 @@
                                 <div class="card--infor--bill">Đơn giá</div>
                                 <div class="card--infor--bill">Số lượng</div>
                                 <div class="card--infor--bill">Thành tiền</div>
+                                <div class="card--infor--bill" onclick="delCart()">Xóa</div>
                             </div>
-                            <div class="product--bill" id="hello">
+                            <div class="product--bill" id="add--bill">
                                 
                             </div>
-                            <!-- <tbody id="hello">
-                               
-                            </tbody> -->
-
+                            <div class="total--product--selled">Tổng Đơn Hàng</div>
                             <div class="pay--bill"><button class="click--pay" onclick="clickPay()">Thanh Toán</button></div>
                         </div></span>
                         <!-- end--bill -->
@@ -141,7 +139,7 @@
                                 <div class="product--item">
                                     <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/vn-11134207-7qukw-lkbsfi6hvr1ka3-1692011166935.jpg?v=1692011171817" alt="product--sale" class="image--product--item">
                                     <div class="sale--banner">Sale 8%</div>
-                                    <div class="action--cart" onclick="getInfor()">Thêm vào giỏ</div>
+                                    <div class="action--cart">Thêm vào giỏ</div>
                                 </div>
                                 <div class="product--title">
                                     <div class="item--title">
@@ -307,7 +305,7 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/vn-11134207-7qukw-lhcqdj0tliya21-1685327004403.jpg?v=1685327009530" alt="product--sale" class="image--product--item">
                         <div class="sale--banner">Sale 20%</div>
-                        <div class="action--cart">Thêm vào giỏ<</div>
+                        <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
                         <div class="item--title">
@@ -914,5 +912,6 @@
         </div>
     </div>
     <script src="index.js"></script>
+    <script src="reverseTime.js"></script>
 </body>
 </html>
