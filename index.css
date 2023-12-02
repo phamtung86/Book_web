@@ -59,7 +59,7 @@ body::-webkit-scrollbar-track{
     width: 10%;
 
 }
-.hotline--click,.user--click,.cart--click{
+.hotline--click,.user--click{
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
@@ -76,7 +76,7 @@ body::-webkit-scrollbar-track{
     border-radius: 10px;
 }
 /* .account--options{
-
+    
 } */
 .account--options--click{
     text-decoration: none;
@@ -89,37 +89,40 @@ body::-webkit-scrollbar-track{
 .account--options--click:hover{
     color: rgb(243,73,45);
 }
-.user--click:hover, .hotline--click:hover, .cart--click:hover{
+.user--click:hover, .hotline--click:hover{
     color: rgb(130, 251, 70);
 }
-/* bill product */
-.product--selled{
-    height: auto;
-    width: 40rem;
-    background-color:rgb(255, 255, 255);
-    position: absolute;
-    left: -30rem;
-    /* display: none; */
-    border-radius: 10px;
-    z-index: 1;
-    padding: 10px 0px;
+.cart--click:hover span {
+    color: rgb(130, 251, 70);
 }
-/* .title--cart:hover .product--selled{
-    display: block;
-    animation-name: change1;
-    animation-duration:  1s;
-    animation-timing-function:  ease;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-} */
-@keyframes change1{
-    from{
-        left: 20rem;
-        display: none;
-    }
-    to{
-        left: -20rem;
-    }
+.cart--click{
+    display: flex;
+    text-decoration: none;
+}
+.title--cart{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.icon--cart{
+    padding: 5px 5px;
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+}
+#number--product{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    height: 20px;
+    width: 20px;
+    border-radius: 50% 50%;
+    text-align: center;
+    left: 0px;
+    top: -10px;
+    font-weight: 700;
 }
 .bill--title{
     color: black;

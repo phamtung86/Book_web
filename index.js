@@ -9,11 +9,6 @@
 // app.listen(port, () => {
 //   console.log(`Example app listening on port ${port}`)
 // })
-function clickPay(){
-    alert("Đơn hàng đã được thanh toán thành công");
-    
-}
-// function click() {
     var cart = JSON.parse(localStorage.getItem("cart"));
             if(cart != null){
                gioHang = cart;
@@ -27,8 +22,12 @@ function clickPay(){
             var hinh = btn[i].parentElement.childNodes[1].src;
             var ten = btn[i].parentElement.nextElementSibling.childNodes[1].innerText;
             var gia = btn[i].parentElement.nextElementSibling.lastElementChild.childNodes[3].value;
+            var discountDisplay = btn[i].parentElement.childNodes[3].innerText;
+            var discount = btn[i].parentElement.childNodes[5].value;
+
             var soluong = 1 ;
             var checkSame = 0;
+            // var productS = new Array(hinh,ten,gia,discountDisplay,discount);
             // Check trung ten
             for (let j = 0; j < gioHang.length; j++) {
                 if(gioHang[j]["Ten"] == ten){
@@ -40,81 +39,64 @@ function clickPay(){
             }
             // neu checkSame == 0 thi khong co trung
             if(checkSame == 0){
-                var addToCart ={"Ten" : ten,"Hinh" :hinh,"Gia" : gia,"Soluong" : soluong}
+                var addToCart ={"Ten" : ten,"Hinh" :hinh,"Gia" : gia,"Soluong" : soluong,"Giamgia" : discount,"Giamgiahienthi" : discountDisplay.substring(5)};
                 gioHang.push(addToCart);
                 alert("Đã Thêm");
             }
             // luu trinh duyet
             localStorage.setItem("cart", JSON.stringify(gioHang));
-            // console.log(ten);
             onLoad();
         });
     }
-// }
-// click();
 function onLoad() {
     var cart = JSON.parse(localStorage.getItem("cart"));
             if(cart != null){
                 document.getElementById("number--product").innerHTML = cart.length;
             }
 }
-function loadDataHome(){
-    onLoad();
-    showCart();
-}
-// function showProductNew() {
-    
-    // }
-    function loadDataCart() {
-        onLoad();
-        showCart();
-        totalProduct();
-}
 function showCart() {
     var cart = JSON.parse(localStorage.getItem("cart"));
     if(cart != null){
         var kq = " ";
         for (let i = 0; i < cart.length; i++) {
-            var total = parseInt(cart[i]["Gia"]*cart[i]["Soluong"]);
+            var total = parseInt(cart[i]["Gia"] * cart[i]["Soluong"] - (cart[i]["Soluong"]*cart[i]["Gia"] *cart[i]["Giamgia"] ));
+            
             kq += `
-                        <div class="image--product--bill">
-                            <img src="`+ cart[i]["Hinh"] +`" alt="image--bill" class="image--bill">
-                        </div>
-                        <div class="bill--product--price">`+cart[i]["Gia"]+`</div>
-                        <div class="bill--product--quantity" >
-                        <button onclick= "down(this,`+i+`)">-</button>
-                        <span>`+cart[i]["Soluong"]+`</span>
-                        <button onclick= "up(this,`+i+`)">+</button>
-                    </div>
-                    <div class="bill--product--total" >`+ total +`</div>
-                        <div class="remove--product" onclick=" delCart()">Xóa</div>                      
+                    <div class="bill--table">
+                    <div class="image--product--bill">
+                    <img src="`+ cart[i]["Hinh"] +`" alt="image--bill" class="image--bill">
+                </div>
+                <div class="name--product">`+cart[i]["Ten"]+`</div>
+                <div class="bill--product--price">`+cart[i]["Gia"]+`</div>
+                <div class="bill--product--quantity" >
+                    <button onclick= "down(this,`+i+`)" class="minus">-</button>
+                    <span class="quantity">`+cart[i]["Soluong"]+`</span>
+                    <button onclick= "up(this,`+i+`)" class="plus">+</button>
+                </div>
+                <div class="bill--product--total" >`+ cart[i]["Giamgiahienthi"] +`</div>
+                <a  href="/Bookweb/Bill/index.html" class="remove--product" onclick="delCartMember(this)">Xóa</a> 
+                </div>                     
                     `;
-                console.log(kq);
         }
-        document.getElementById("add--bill").innerHTML = kq;
+        var cartTable =document.getElementById("add--bill").innerHTML = kq;
     }
 }
 function delCart() {
         localStorage.removeItem("cart");
-        // window.location("link") tro ve trang chu
         onLoad();
 }
-// delCart();
 function totalProduct() {
     var cart = gioHang;
     if(cart != null){
         var total = 0;
         for (let i = 0; i < cart.length; i++) {
-            var totalPrice = parseInt(cart[i]["Gia"]*cart[i]["Soluong"]);
+            var totalPrice = parseInt(cart[i]["Gia"]*cart[i]["Soluong"] - (cart[i]["Soluong"]*cart[i]["Gia"] *cart[i]["Giamgia"] ));
             total += totalPrice;
-            // document.querySelector("bill--total--product").innerHTML = totalPrice;
         }
-        document.querySelector(".total--product--selled").innerHTML =  "Tổng Đơn Hàng: " + total +" ₫";
-
-        
+        document.querySelector(".total--product--selled").innerHTML =  "Tổng Đơn Hàng: " + total +" ₫";       
     }
 }
-// totalProduct();
+totalProduct();
 function up(x,i) {
     // get so luong trong span
     let td = x.parentElement;
@@ -135,14 +117,33 @@ function down(a,i) {
     var newslMinus = sl -1;
     td.childNodes[3].innerHTML = newslMinus;
     if(newslMinus < 1){
-        // break;
-        let x = "Bạn có muốn xóa sản phẩm không"
-        // alert(x);
-        newslMinus = 0;
-        if(alert(x) == onclick){
-            delCart();
-        } 
+         newslMinus = 0;
+        delCartMember(this);
     }
     cart[i]["Soluong"] = newslMinus;
     totalProduct();
+}
+function delCartMember(index) {
+    let cart = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : JSON.parse(localStorage.setItem("cart"));
+    if(confirm ("Bạn có muốn xóa không")){
+    cart.splice(index,1);
+}
+localStorage.setItem("cart", JSON.stringify(cart));
+    onLoad();
+    showCart();
+    totalProduct();
+}
+function clickPay(){
+    if(cart == null){
+     alert("Chưa có đơn hàng")
+    }
+    console.log(cart.length)
+ }
+ function loadDataHome(){
+    onLoad();
+}
+ function loadDataCart() {
+        onLoad();
+        showCart();
+        // totalProduct();
 }

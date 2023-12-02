@@ -44,28 +44,13 @@
                     </span>
                 </a>
             </div>
-            <div class="cart" onload="loadDataCart()">
-                <a href="#" class="cart--click" style="position: absolute;">
-                    <span class="icon--cart" style="padding: 5px 5px;"><i style="font-size: 30px;height: 100%;" class="fa-solid fa-cart-shopping"></i></span>
-                    <span class="title--cart">Giỏ Hàng <span id="number--product"> </span> <br>Thanh Toán
-                        <div id="cart--bill" class="product--selled">
-                            <h3 class="bill--title">Đơn Hàng Của Bạn<span class="number--products"> </span></h3>
-                            <div class="infor--product--bill">
-                                <div class="card--infor--bill">Thông tin sản phẩm</div>
-                                <div class="card--infor--bill">Đơn giá</div>
-                                <div class="card--infor--bill">Số lượng</div>
-                                <div class="card--infor--bill">Thành tiền</div>
-                                <div class="card--infor--bill" onclick="delCart()">Xóa</div>
-                            </div>
-                            <div class="product--bill" id="add--bill">
-                                
-                            </div>
-                            <div class="total--product--selled">Tổng Đơn Hàng</div>
-                            <div class="pay--bill"><button class="click--pay" onclick="clickPay()">Thanh Toán</button></div>
-                        </div></span>
-                        <!-- end--bill -->
+            <div class="cart">
+                <a class="cart--click" href="/Bookweb/Bill/index.html" target="_blank">
+                    <span class="icon--cart"><i style="font-size: 30px;height: 100%;" class="fa-solid fa-cart-shopping"></i>
+                        <span id="number--product"> 0 </span> 
+                    </span>
+                    <span class="title--cart">Giỏ Hàng <br>Thanh Toán </span>
                 </a>
-               
             </div>
         </div>
     </div>
@@ -113,7 +98,6 @@
                 </ul>
             </div>
             <div class="nav--none">
-
             </div>
             </div>
             <div class="book__banner__deal">
@@ -139,6 +123,7 @@
                                 <div class="product--item">
                                     <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/vn-11134207-7qukw-lkbsfi6hvr1ka3-1692011166935.jpg?v=1692011171817" alt="product--sale" class="image--product--item">
                                     <div class="sale--banner">Sale 8%</div>
+                                    <input type="hidden" name="discount" id="" class="discount--hidden" value="0.08">
                                     <div class="action--cart">Thêm vào giỏ</div>
                                 </div>
                                 <div class="product--title">
@@ -156,6 +141,7 @@
                                 <div class="product--item">
                                     <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/2830aad4-23e9-4109-8872-1e071c9323d9.jpg?v=1618630773713" alt="product--sale" class="image--product--item">
                                     <div class="sale--banner">Sale 20%</div>
+                                    <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                                     <div class="action--cart" >Thêm vào giỏ</div>
                                 </div>
                                 <div class="product--title">
@@ -173,6 +159,7 @@
                                 <div class="product--item">
                                     <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/2e081084-3dbb-4a78-8c25-9563a0f3cb73.jpg?v=1618630773783" alt="product--sale" class="image--product--item">
                                     <div class="sale--banner">Sale 20%</div>
+                                    <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                                     <div class="action--cart">Thêm vào giỏ</div>
                                 </div>
                                 <div class="product--title">
@@ -189,7 +176,8 @@
                             <div class="product-sale">
                                 <div class="product--item">
                                     <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/59fc184d-0d23-48ba-b8fd-640e766d2f68.jpg?v=1618630776743" alt="product--sale" class="image--product--item">
-                                    <div class="sale--banner">Sale 20%</div>
+                                    <div class="sale--banner">Sale 20%</div>                         
+                                    <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                                     <div class="action--cart">Thêm vào giỏ</div>
                                 </div>
                                 <div class="product--title">
@@ -207,6 +195,7 @@
                                 <div class="product--item">
                                     <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/d214d22a-2ef1-4bcc-acb2-5e4719a3bfcb.jpg?v=1618630776793" alt="product--sale" class="image--product--item">
                                     <div class="sale--banner">Sale 20%</div>
+                                    <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                                     <div class="action--cart">Thêm vào giỏ</div>
                                 </div>
                                 <div class="product--title">
@@ -214,9 +203,9 @@
                                         <a href="" target="_blank" class="item--title--click">Sách - Nhắm Đúng Mục Tiêu Chọn Đúng Điểm Đến</a>
                                     </div>
                                     <div class="item--price--sell">
-                                        <div class="item--price">₫ 100.800</div>
-                                        <input type="hidden" name="price" id="" class="price--button" value="100800">
-                                        <div class="item--sell">Sắp hết hàng</div>
+                                    <div class="item--price">₫ 100.800</div>                        
+                                    <input type="hidden" name="price" id="" class="price--button" value="100800">
+                                    <div class="item--sell">Sắp hết hàng</div>
                                     </div>
                                 </div>
                             </div>
@@ -224,7 +213,9 @@
                                 <div class="product--item">
                                     <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/445eee04-e577-4a7d-9a18-01f9a8b11c18.jpg?v=1618630776847" alt="product--sale" class="image--product--item">
                                     <div class="sale--banner">Sale 20%</div>
+                                    <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                                     <div class="action--cart">Thêm vào giỏ</div>
+                   
                                 </div>
                                 <div class="product--title">
                                     <div class="item--title">
@@ -241,6 +232,7 @@
                                 <div class="product--item">
                                     <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/16d733584f43f33d86090a139cf67e01.jpg?v=1618630778957" alt="product--sale" class="image--product--item">
                                     <div class="sale--banner">Sale 20%</div>
+                                    <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                                     <div class="action--cart"><a href="" class="action--cart--click">Thêm vào giỏ</a></div>
                                 </div>
                                 <div class="product--title">
@@ -288,6 +280,7 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/combo-dac-nhan-tam-nha-gia-kim-1685350354660.jpg?v=1685350359023" alt="product--sale" class="image--product--item">
                         <div class="sale--banner">Sale 20%</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
@@ -305,6 +298,7 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/vn-11134207-7qukw-lhcqdj0tliya21-1685327004403.jpg?v=1685327009530" alt="product--sale" class="image--product--item">
                         <div class="sale--banner">Sale 20%</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
@@ -322,6 +316,7 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/vn-11134207-7qukw-lha9lwzs81dff5-1685174714426.jpg?v=1685174719537" alt="product--sale" class="image--product--item">
                         <div class="sale--banner">Sale 20%</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
@@ -338,7 +333,8 @@
                 <div class="product--seller product-sale">
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/vn-11134207-7qukw-lha8sue13jua54-1685173677539.jpg?v=1685173684167" alt="product--sale" class="image--product--item">
-                        <div class="sale--banner">Sale 20%</div>
+                        <div class="sale--banner">Sale 20%</div>                  
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
@@ -356,6 +352,7 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/vn-11134207-7qukw-lh8w93zcx54iab-1685096596332.jpg?v=1685096604037" alt="product--sale" class="image--product--item">
                         <div class="sale--banner">Sale 20%</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
@@ -386,6 +383,7 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/untitled-1691803116741.png?v=1691837047567" alt="product--sale" class="image--product--item">
                         <div class="sale--banner" style="opacity: 0;">Sale 20%</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
@@ -403,6 +401,7 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/combo-ti-hon-cam-nang-1686281491487.jpg?v=1686281496140" alt="product--sale" class="image--product--item">
                         <div class="sale--banner" style="opacity: 0;">Sale 20%</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
@@ -420,6 +419,7 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/combo-dam-mi-cong-tu-hoan-hi-1685585924829.jpg?v=1685585928770" alt="product--sale" class="image--product--item">
                         <div class="sale--banner" style="opacity: 0;">Sale 20%</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
@@ -437,7 +437,8 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/combo-chery-1685524211691.jpg?v=1685526479250" alt="product--sale" class="image--product--item">
                         <div class="sale--banner" style="opacity: 0;">Sale 20%</div>
-                        <div class="action--cart">Thêm vào giỏ</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
+                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
                         <div class="item--title">
@@ -454,6 +455,7 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/cherry-magic-tap-1-2-1685524121390.jpg?v=1685526476300" alt="product--sale" class="image--product--item">
                         <div class="sale--banner" style="opacity: 0;">Sale 20%</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
@@ -463,7 +465,7 @@
                         <div class="item--price--sell">
                             <div class="item--price">₫ 218.000</div>
                             <input type="hidden" name="price" id="" class="price--button" value="218000">
-                            <div class="item--sell" style="opacity: 0;"></div>
+                             <div class="item--sell" style="opacity: 0;"></div>
                         </div>
                     </div>
                 </div>
@@ -471,6 +473,7 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/combo-999-la-thu-song-ngu-1685519560657.png?v=1685522305667" alt="product--sale" class="image--product--item">
                         <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
@@ -515,6 +518,7 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/combo-999-la-thu-song-ngu-1685519560657.png?v=1685522305667" alt="product--sale" class="image--product--item">
                         <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
@@ -532,7 +536,8 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/b1-1685518635296.png?v=1685521494110" alt="product--sale" class="image--product--item">
                         <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
-                        <div class="action--cart">Thêm vào giỏ</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
+                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
                         <div class="item--title">
@@ -549,6 +554,7 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/chuong-gio-3-1685436157575.jpg?v=1685436162633" alt="product--sale" class="image--product--item">
                         <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
@@ -566,6 +572,7 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/combo-dac-nhan-tam-nha-gia-kim-1685350354660.jpg?v=1685350359023" alt="product--sale" class="image--product--item">
                         <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
@@ -583,6 +590,7 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/vn-11134207-7qukw-lhcqdj1dgi0ibc-1685328808613.jpg?v=1685328814283" alt="product--sale" class="image--product--item">
                         <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
@@ -600,6 +608,7 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/vn-11134207-7qukw-lhcqdj0tliya21-1685327004403.jpg?v=1685327009530" alt="product--sale" class="image--product--item">
                         <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
@@ -627,6 +636,7 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/e8c5adfd-5b83-4abc-8452-a477badf9568.jpg?v=1618630777190" alt="product--sale" class="image--product--item">
                         <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
@@ -644,6 +654,7 @@
                     <div class="product--item">
                         <img src=" https://bizweb.dktcdn.net/thumb/large/100/417/638/products/2e3529a46a1a71f2c8e5adbaf4285cc8.jpg?v=1618630777363" alt="product--sale" class="image--product--item">
                         <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
@@ -661,6 +672,7 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/49d0e14142df6726921fccd80fc72535.jpg?v=1618630796947" alt="product--sale" class="image--product--item">
                         <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
@@ -678,6 +690,7 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/3b9253b6320a178307014b0677b8b45a.jpg?v=1618630797000" alt="product--sale" class="image--product--item">
                         <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
@@ -695,6 +708,7 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/9f8507fafaa0d671300cb4195ab16efd.jpg?v=1618630805120" alt="product--sale" class="image--product--item">
                         <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
@@ -712,6 +726,7 @@
                     <div class="product--item">
                         <img src="https://bizweb.dktcdn.net/thumb/large/100/417/638/products/a8c2379d8544cb212fcd744c594f8227.jpg?v=1618630822807" alt="product--sale" class="image--product--item">
                         <div class="sale--banner" style="opacity: 1;">Sale 20%</div>
+                        <input type="hidden" name="discount" id="" class="discount--hidden" value="0.2">
                         <div class="action--cart">Thêm vào giỏ</div>
                     </div>
                     <div class="product--title">
